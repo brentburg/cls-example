@@ -29,7 +29,7 @@ class CLSNamespace {
 
   run (cb) {
     process.nextTick(() => {
-      this.context = {}
+      this.context = Object.create(this.context)
       cb()
       this.context = null
     })
