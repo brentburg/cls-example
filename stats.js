@@ -67,7 +67,6 @@ class Stats {
     for (let key in stats.timers) {
       durations[key] = stats.timers[key].time()
     }
-    debugger
     return Object.assign(durations, stats.counters)
   }
 }
